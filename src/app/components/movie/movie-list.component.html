@@ -1,0 +1,24 @@
+<h1>Ttagda !!!!</h1>
+
+<table class="table">
+	<tr>
+		<th>Title</th>
+		<th>Length</th>
+		<th>Rating</th>
+		<th></th>
+	</tr>
+	<tr ng-repeat="movie in model.movies">
+		<td>{{movie.title}}</td>
+		<td>{{movie.length}}</td>
+		<td><movie-rating value="movie.rating"></movie-rating></td>
+		<td>
+			<button ng-click="model.upRating(movie)">+</button>
+			<button ng-click="model.downRating(movie)">-</button>
+
+			<!-- <a ng-link="['Details', {id:movie.id}]">Detail</a> -->
+			<button ng-click="model.goTo(movie.id)">Detail</button>
+		</td>
+
+	</tr>
+
+</table>
